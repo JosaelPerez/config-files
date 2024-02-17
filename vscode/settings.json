@@ -1,0 +1,314 @@
+{
+  // UI
+
+  // Sets UI transparency
+  // Requires GlassIt-VSC extension (Id: s-nlf-fh.glassit)
+  "glassit.alpha": 245,
+  // UI zoom
+  "window.zoomLevel": 1,
+  // Hides UI elements
+  "workbench.activityBar.location": "hidden",
+  "window.menuBarVisibility": "toggle",
+  // Sets UI theme
+  // Requires Tokyo Night extension (Id: enkia.tokyo-night)
+  "workbench.colorTheme": "Tokyo Night",
+
+  // EXPLORER
+
+  // Disables compact folders
+  "explorer.compactFolders": false,
+  // Enables confirmation when writing files
+  "explorer.confirmDelete": false,
+  "explorer.confirmPasteNative": false,
+
+  // TERMINAL
+
+  // Sets terminal cursor to I-Beam style (line)
+  "terminal.integrated.cursorStyle": "line",
+  // Sets terminal cursor to blink
+  "terminal.integrated.cursorBlinking": true,
+  // Hides the terminal on VSCode startup
+  "terminal.integrated.hideOnStartup": "always",
+  // Sets the terminal font family
+  // MesloLGS NF is required for powerline terminal prompts and customization
+  "terminal.integrated.fontFamily": "'MesloLGS NF'",
+
+  // EDITOR
+
+  // Sets the editor font family
+  "editor.fontFamily": "MesloLGS NF",
+  // Change editor line numbers to relative
+  "editor.lineNumbers": "relative",
+  // Enables word wrap
+  "editor.wordWrap": "on",
+  // Enables autosave
+  "files.autoSave": "afterDelay",
+  // Enables autoformat on save
+  "editor.formatOnSave": true,
+  // Sets default formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Disables VSCode to setup identation size by itself
+  "editor.detectIndentation": false,
+  // Disables minimap
+  "editor.minimap.enabled": false,
+  // Turns off symbols on breadcrumbs
+  // Breadcrumbs show files only
+  "breadcrumbs.symbolPath": "off",
+  // Show line numbers on Zen mode
+  "zenMode.hideLineNumbers": false,
+
+  // PRETTIER
+
+  // Disables semicolons at the end of lines
+  "prettier.semi": false,
+
+  // JAVASCRIPT
+
+  // Always update modelue imports when renaming or moving files
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // SVELTE
+
+  // Enables TypeScript intellisense for svelte files
+  "svelte.enable-ts-plugin": true,
+  // Sets default formatter for svelte files
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+
+  // VIM
+  // Requires Vim extension (Id: vscodevim.vim)
+
+  // Sets leader key to space
+  "vim.leader": "<Space>",
+  // Allow vim use system clipboard
+  "vim.useSystemClipboard": true,
+  // Allow vim use and override ctrl keys
+  "vim.useCtrlKeys": true,
+  "vim.insertModeKeyBindings": [
+    //Exit insert mode
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // EDITORS
+
+    // Switch between editor tabs
+    {
+      "before": ["<S-h>"],
+      "commands": [":bprevious"]
+    },
+    {
+      "before": ["<S-l>"],
+      "commands": [":bnext"]
+    },
+    // Split editor vertically
+    {
+      "before": ["leader", "s", "v"],
+      "commands": [":vsplit"]
+    },
+    // Split editor horizontally
+    {
+      "before": ["leader", "s", "h"],
+      "commands": [":split"]
+    },
+    // Switch between opened editors
+    {
+      "before": ["<C-h>"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["<C-j>"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["<C-l>"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+
+    // FILES
+
+    // Save and exit current file
+    {
+      "before": ["leader", "w"],
+      "commands": [":w!"]
+    },
+    {
+      "before": ["leader", "q"],
+      "commands": [":q"]
+    },
+    {
+      "before": ["leader", "x"],
+      "commands": [":x!"]
+    },
+    // Rename current file
+    {
+      "before": ["<leader>", "r", "f"],
+      "commands": ["fileutils.renameFile"]
+    },
+
+    // SEARCHING & EDITING
+
+    // Search files
+    {
+      "before": ["leader", "o"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    // Format file
+    {
+      "before": ["leader", "p"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    // Go to end onf line
+    {
+      "before": ["leader", "l"],
+      "commands": ["cursorEnd"]
+    },
+    // Go to start of line
+    {
+      "before": ["leader", "h"],
+      "commands": ["cursorHome"]
+    },
+    // Move line down
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    // Move line up
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    // Add line down
+    {
+      "before": ["o"],
+      "after": ["o", "<Esc>"]
+    },
+    // Add line up
+    {
+      "before": ["O"],
+      "after": ["O", "<Esc>"]
+    },
+    // Duplicate line down
+    {
+      "before": ["leader", "d"],
+      "commands": ["editor.action.copyLinesDownAction"]
+    },
+    // Toggle comment
+    {
+      "before": ["leader", "c"],
+      "commands": ["editor.action.commentLine"]
+    },
+    // Select all
+    {
+      "before": ["leader", "a"],
+      "after": ["g", "g", "V", "G"]
+    },
+    // Find
+    {
+      "before": ["leader", "f", "f"],
+      "commands": ["actions.find"]
+    },
+    // Find & Replace
+    {
+      "before": ["leader", "f", "r"],
+      "commands": ["editor.action.startFindReplaceAction"]
+    },
+    // Rename declaration
+    {
+      "before": ["leader", "r", "d"],
+      "commands": ["editor.action.rename"]
+    },
+    // Quickfix
+    {
+      "before": ["<leader>", "."],
+      "commands": ["editor.action.quickFix"]
+    },
+    // Go to definition
+    {
+      "before": ["leader", "g"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    // See definition (pop up)
+    {
+      "before": ["s", "d"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+    // Sets up undo & redo features
+    // This works in addition with user config on keybindings file
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["<C-r>"],
+      "commands": ["redo"]
+    },
+    // Ident lines
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Select to end of line
+    {
+      "before": ["leader", "l"],
+      "after": ["$"]
+    },
+    // Select to start of line
+    {
+      "before": ["leader", "h"],
+      "after": ["^"]
+    },
+    // Move line down
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    // Move line up
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    // Duplicate selection
+    {
+      "before": ["leader", "d"],
+      "commands": ["editor.action.copyLinesDownAction"]
+    },
+    // Toggle comment selection
+    {
+      "before": ["leader", "c"],
+      "commands": ["editor.action.commentLine"]
+    },
+    // Ident selection
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    // Add cursor to line ends of selection
+    {
+      "before": ["leader", "e"],
+      "commands": ["editor.action.insertCursorAtEndOfEachLineSelected"]
+    },
+    // Overrides vim paste on selected text (replacing) so it does not copy the replaced text
+    {
+      "before": ["p"],
+      "commands": ["editor.action.clipboardPasteAction"]
+    }
+  ]
+}
