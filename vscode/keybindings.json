@@ -7,7 +7,7 @@
     "key": "j",
     "when": "neovim.mode == insert && editorTextFocus",
     "args": "j"
-  }
+  },
 
   // New window
   {
