@@ -1,6 +1,14 @@
 [
   // VSCODE + NEOVIM CUSTOM MOTIONS
 
+  //Translates escape to jj to exit insert mode
+  {
+    "command": "vscode-neovim.compositeEscape1",
+    "key": "j",
+    "when": "neovim.mode == insert && editorTextFocus",
+    "args": "j"
+  }
+
   // New window
   {
     "key": "ctrl+shift+n",
