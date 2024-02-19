@@ -297,7 +297,7 @@
   // Focus on editor
   {
     "key": "space e",
-    "command": "workbench.action.focusActiveEditorGroup",
+    "command": "workbench.action.toggleSidebarVisibility",
     "when": "filesExplorerFocus && !inputFocus && neovim.mode != 'insert'"
   },
 
