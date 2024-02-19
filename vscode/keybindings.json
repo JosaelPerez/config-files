@@ -264,6 +264,18 @@
     "command": "editor.action.showDefinitionPreviewHover",
     "when": "editorTextFocus && neovim.mode == 'normal'"
   },
+  // Select next suggestion
+  {
+    "key": "alt+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion && neovim.mode == 'normal'"
+  },
+  // Select prev suggestion
+  {
+    "key": "alt+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion && neovim.mode == 'normal'"
+  },
 
   // EXPLORER
   // Neovim defaults
