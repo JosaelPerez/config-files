@@ -43,7 +43,7 @@
   },
   // Format current file
   {
-    "key": "space p",
+    "key": "space f d",
     "command": "editor.action.formatDocument",
     "when": "editorTextFocus && neovim.mode != 'insert'"
   },
@@ -69,6 +69,7 @@
 
   // CURSOR NAVIGATION
   // Neovim default: hjkl
+  // Go to with :linenumber (ex. :10)
   // Next word
   {
     "key": "shift+l",
@@ -83,27 +84,41 @@
   },
   // Go to start of line
   {
-    "key": "ctrl+h",
+    "key": "space h",
     "command": "cursorHome",
     "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   // Go to end of line
   {
-    "key": "ctrl+l",
+    "key": "space l",
     "command": "cursorEnd",
     "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   // Go to top of file
   {
-    "key": "ctrl+k",
+    "key": "space k",
     "command": "cursorTop",
     "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   // Go to bottom of file
   {
-    "key": "ctrl+j",
+    "key": "space j",
     "command": "cursorBottom",
     "when": "editorTextFocus && neovim.mode != 'insert'"
+  },
+  // Go to next ocurrence
+  {
+    "key": "n",
+    "command": "vscode-neovim.send",
+    "when": "editorTextFocus && neovim.mode == 'normal'",
+    "args": "*"
+  },
+  // Go to previous ocurrence
+  {
+    "key": "shift+n",
+    "command": "vscode-neovim.send",
+    "when": "editorTextFocus && neovim.mode == 'normal'",
+    "args": "#"
   },
   // Move line up
   {
@@ -129,7 +144,7 @@
     "command": "editor.action.insertLineAfter",
     "when": "editorTextFocus && neovim.mode == 'normal'"
   },
-  // Duplicate line down
+  // Duplicate lines down
   {
     "key": "space d",
     "command": "editor.action.copyLinesDownAction",
@@ -153,22 +168,22 @@
   //     "command": "editor.action.insertCursorAtEndOfEachLineSelected",
   //     "when": "editorTextFocus && neovim.mode == 'visual'"
   //   },
+  // Select all
+  {
+    "key": "space a",
+    "command": "editor.action.selectAll",
+    "when": "editorTextFocus && neovim.mode == 'normal'"
+  },
   // Outdent lines
   {
-    "key": "shift+,",
+    "key": ",",
     "command": "editor.action.outdentLines",
     "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   // Indent lines
   {
-    "key": "shift+.",
+    "key": ".",
     "command": "editor.action.indentLines",
-    "when": "editorTextFocus && neovim.mode != 'insert'"
-  },
-  // Select all
-  {
-    "key": "space a",
-    "command": "editor.action.selectAll",
     "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   // Toggle comment
@@ -183,8 +198,7 @@
   // Switch between editor tabs
   {
     "key": "alt+l",
-    "command": "workbench.action.nextEditor",
-    "when": "editorTextFocus && neovim.mode != 'insert'"
+    "command": "workbench.action.nextEditor"
   },
   {
     "key": "alt+h",
@@ -192,14 +206,14 @@
   },
   // Split editor vertically
   {
-    "key": "space s v",
+    "key": "alt+v",
     "command": "vscode-neovim.send",
     "when": "editorTextFocus && neovim.ctrlKeysNormal.r && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'",
     "args": [":vsplit<CR>"]
   },
   // Split editor horizontally
   {
-    "key": "space s h",
+    "key": "alt+s",
     "command": "vscode-neovim.send",
     "when": "editorTextFocus && neovim.ctrlKeysNormal.r && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'",
     "args": [":split<CR>"]
@@ -290,15 +304,15 @@
   //   R	workbench.files.action.refreshFilesExplorer
   // Focus on file explorer
   {
-    "key": "space e",
+    "key": "alt+e",
     "command": "workbench.explorer.fileView.focus",
-    "when": "editorTextFocus && neovim.mode != 'insert'"
+    "when": "editorTextFocus && neovim.mode == 'normal'"
   },
   // Focus on editor
   {
-    "key": "space e",
+    "key": "alt+e",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "filesExplorerFocus && !inputFocus && neovim.mode != 'insert'"
+    "when": "filesExplorerFocus && !inputFocus && neovim.mode == 'normal'"
   },
 
   // TERMINAL
