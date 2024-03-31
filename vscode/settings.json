@@ -125,6 +125,12 @@
         }
       },
       {
+        "scope": "entity.name.tag support.class.component",
+        "settings": {
+          "foreground": "#5686c4a3"
+        }
+      },
+      {
         "scope": "storage.type.function",
         "settings": {
           "foreground": "#5686c4"
