@@ -8,10 +8,6 @@
   "window.zoomLevel": 1,
   // Hides UI elements
   "workbench.activityBar.location": "hidden",
-  "window.menuBarVisibility": "toggle",
-  // Sets UI theme
-  // Requires Tokyo Night extension (Id: enkia.tokyo-night)
-  "workbench.colorTheme": "Tokyo Night",
 
   // EXPLORER
 
@@ -73,15 +69,6 @@
     "postcss": "css"
   },
 
-  // SVELTE
-
-  // Enables TypeScript intellisense for svelte files
-  "svelte.enable-ts-plugin": true,
-  // Sets default formatter for svelte files
-  "[svelte]": {
-    "editor.defaultFormatter": "svelte.svelte-vscode"
-  },
-
   // NEOVIM
   // To use Neovim extension you need to install neovim locally
   // Neovim checks configuration on ~/.config/init.lua (on linux)
@@ -92,5 +79,117 @@
   // Use this option for performace improvements
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
+  },
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "extensions.ignoreRecommendations": true,
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.menuBarVisibility": "toggle",
+  "editor.tabSize": 2,
+  "terminal.integrated.env.linux": {},
+  "console-ninja.featureSet": "Community",
+
+  // CUSTOM THEME
+
+  "workbench.colorTheme": "Tokyo Night",
+
+  "workbench.colorCustomizations": {},
+
+  "editor.tokenColorCustomizations": {
+    "variables": "#d4d4d4",
+    "keywords": "#5686c4a3",
+    "numbers": "#d4d4d4",
+    "types": "#5686c4",
+    "functions": "#5686c4",
+    "strings": "#708661",
+    "comments": "#60646d",
+
+    "textMateRules": [
+      {
+        "scope": "entity.name.tag",
+        "settings": {
+          "foreground": "#5686c4a3"
+        }
+      },
+      {
+        "scope": "punctuation.definition.tag",
+        "settings": {
+          "foreground": "#5686c4a3"
+        }
+      },
+      {
+        "scope": "entity.other.attribute-name",
+        "settings": {
+          "foreground": "#5686c4"
+        }
+      },
+      {
+        "scope": "storage.type.function",
+        "settings": {
+          "foreground": "#5686c4"
+        }
+      },
+      {
+        "scope": "",
+        "settings": {
+          "foreground": "#5686c4"
+        }
+      },
+      {
+        "scope": "variable.parameter",
+        "settings": {
+          "foreground": "#d4d4d4"
+        }
+      },
+      {
+        "scope": "meta.definition.variable variable.other.constant",
+        "settings": {
+          "foreground": "#d4d4d4"
+        }
+      },
+      {
+        "scope": "meta.var.expr storage.type",
+        "settings": {
+          "foreground": "#5686c4a3"
+        }
+      },
+      {
+        "scope": "meta.object-literal.key",
+        "settings": {
+          "foreground": "#d4d4d4"
+        }
+      },
+      {
+        "scope": "punctuation.definition.string.begin",
+        "settings": {
+          "foreground": "#d4d4d4"
+        }
+      },
+      {
+        "scope": "punctuation.definition.string.end",
+        "settings": {
+          "foreground": "#d4d4d4"
+        }
+      },
+      {
+        "scope": "keyword.control",
+        "settings": {
+          "foreground": "#5686c4a3"
+        }
+      },
+      {
+        "scope": "keyword.control.export",
+        "settings": {
+          "foreground": "#5686c4a3"
+        }
+      },
+      {
+        "scope": "keyword.control.default",
+        "settings": {
+          "foreground": "#5686c4a3"
+        }
+      }
+    ]
   }
 }
