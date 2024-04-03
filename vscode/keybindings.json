@@ -43,7 +43,7 @@
   },
   // Format current file
   {
-    "key": "space f d",
+    "key": "space p",
     "command": "editor.action.formatDocument",
     "when": "editorTextFocus && neovim.mode != 'insert'"
   },
@@ -260,6 +260,13 @@
     "command": "editor.action.quickFix",
     "when": "editorTextFocus && (neovim.mode == 'normal' || neovim.mode == 'visual')"
   },
+  // Show options
+  {
+    "key": "space o",
+    "command": "editor.action.showContextMenu",
+    "when": "editorTextFocus && neovim.mode != 'insert'"
+  },
+
   // Rename declaration
   {
     "key": "space r d",
@@ -306,7 +313,7 @@
   {
     "key": "alt+e",
     "command": "workbench.explorer.fileView.focus",
-    "when": "editorTextFocus && neovim.mode == 'normal'"
+    "when": "neovim.mode == 'normal'"
   },
   // Focus on editor
   {
@@ -351,5 +358,15 @@
     "key": "ctrl+h",
     "command": "workbench.action.navigateLeft",
     "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "toggleFindInSelection",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+l",
+    "command": "-toggleFindInSelection",
+    "when": "editorFocus"
   }
 ]
