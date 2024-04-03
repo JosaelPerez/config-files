@@ -97,9 +97,9 @@
   "workbench.colorCustomizations": {},
 
   "editor.tokenColorCustomizations": {
-    "variables": "#d4d4d4",
+    "variables": "#ececec",
     "keywords": "#5686c4a3",
-    "numbers": "#d4d4d4",
+    "numbers": "#ececec",
     "types": "#5686c4",
     "functions": "#5686c4",
     "strings": "#708661",
@@ -130,6 +130,7 @@
           "foreground": "#5686c4a3"
         }
       },
+
       {
         "scope": "storage.type.function",
         "settings": {
@@ -137,7 +138,7 @@
         }
       },
       {
-        "scope": "",
+        "scope": "variable",
         "settings": {
           "foreground": "#5686c4"
         }
@@ -145,13 +146,31 @@
       {
         "scope": "variable.parameter",
         "settings": {
-          "foreground": "#d4d4d4"
+          "foreground": "#ececec"
         }
       },
       {
         "scope": "meta.definition.variable variable.other.constant",
         "settings": {
-          "foreground": "#d4d4d4"
+          "foreground": "#ececec"
+        }
+      },
+      {
+        "scope": "constant.numeric",
+        "settings": {
+          "foreground": "#ececec"
+        }
+      },
+      {
+        "scope": "keyword.other.unit",
+        "settings": {
+          "foreground": "#5686c4a3"
+        }
+      },
+      {
+        "scope": "keyword.control punctuation.definition.keyword",
+        "settings": {
+          "foreground": "#5686c4a3"
         }
       },
       {
@@ -163,19 +182,19 @@
       {
         "scope": "meta.object-literal.key",
         "settings": {
-          "foreground": "#d4d4d4"
+          "foreground": "#ececec"
         }
       },
       {
         "scope": "punctuation.definition.string.begin",
         "settings": {
-          "foreground": "#d4d4d4"
+          "foreground": "#ececec"
         }
       },
       {
         "scope": "punctuation.definition.string.end",
         "settings": {
-          "foreground": "#d4d4d4"
+          "foreground": "#ececec"
         }
       },
       {
@@ -197,5 +216,6 @@
         }
       }
     ]
-  }
+  },
+  "editor.snippetSuggestions": "top"
 }
