@@ -152,7 +152,7 @@
 	"Lamda":{
 		"prefix": "lamda",
 		"body":[
-      "const ${1:foo} = (${2:params}) => {",
+      "(${1:params}) => {",
       "\treturn $0",
       "}",
     ] ,
@@ -161,7 +161,7 @@
 	"Async Lamda":{
 		"prefix": "lamdaAsync",
 		"body":[
-      "const ${1:foo} = async (${2:params}) => {",
+      "async (${1:params}) => {",
       "\treturn $0",
       "}",
     ] ,
