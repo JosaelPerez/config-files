@@ -181,15 +181,24 @@
 
  // REACT 
 
+"React Props": {
+  "prefix": "props",
+  "body": [
+    "type Props = {",
+    "\tchildren?: React.ReactNode",
+    "\tclassName?: string",
+    "\t// Other fields here...",
+    "}",
+  ]
+},
+ 
+
 "React Component": {
   "prefix": "comp",
   "body": [
-    "\"use client\"",
-    "",
     "type Props = {",
-    "\tchildren: React.ReactNode",
-    "\tfield: string",
-    "\toptional?: number",
+    "\tchildren?: React.ReactNode",
+    "\tclassName?: string",
     "\t// Other fields here...",
     "}",
     "",
